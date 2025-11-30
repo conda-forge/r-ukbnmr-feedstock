@@ -1,4 +1,4 @@
-{% set version = '3.2.0' %}
+{% set version = "3.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ukbnmr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ukbnmr/ukbnmr_{{ version }}.tar.gz
-  sha256: 01116961d04cfdcf2362941a3759e41df523752af094d0450c6ce1550eb34d2a
+  sha256: a6e50705c935b806bad6aec25195a326ad71ba9e0506265aa6b4840bd50157e1
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -47,13 +47,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=ukbnmr
   license: MIT
-  summary: A suite of utilities for working with the UK Biobank <https://www.ukbiobank.ac.uk/>
-    Nuclear Magnetic Resonance spectroscopy (NMR) metabolomics data <https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=220>.
-    Includes functions for extracting biomarkers from decoded UK Biobank field data,
-    removing unwanted technical variation from biomarker concentrations, computing an
-    extended set of lipid, fatty acid, and cholesterol fractions, and for re-deriving
-    composite biomarkers and ratios after adjusting data for unwanted biological variation.
-    For further details on methods see Ritchie SC et al. Sci Data (2023) <doi:10.1038/s41597-023-01949-y>.
+  summary: A suite of utilities for working with the UK Biobank <https://www.ukbiobank.ac.uk/> Nuclear Magnetic Resonance spectroscopy (NMR) metabolomics data <https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=220>. Includes functions for extracting biomarkers from decoded UK Biobank field data, removing unwanted technical
+    variation from biomarker concentrations, computing an extended set of lipid, fatty acid, and cholesterol fractions, and for re-deriving composite biomarkers and ratios after adjusting data for unwanted biological variation. For further details on methods see Ritchie SC et al. Sci Data (2023) <doi:10.1038/s41597-023-01949-y>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
