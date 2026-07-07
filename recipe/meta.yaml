@@ -1,15 +1,15 @@
-{% set version = "3.3.2" %}
+{% set version = "3.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-ukbnmr
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/ukbnmr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ukbnmr/ukbnmr_{{ version }}.tar.gz
-  sha256: e4ea1afbf2c6cc5caa5559c7955aa9b4b59ea64c2c73fdb733d3a87045f9e5d6
+  sha256: afad3961c37d47d13ab46dc5a82c21235ab259ef090b17d3ec8be34136946dbf
 
 build:
   number: 0
